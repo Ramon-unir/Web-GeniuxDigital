@@ -5,18 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Servicios de Ciberseguridad</title>
+    <link rel="icon" href="favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #050816;
+
+            --accent: #27f5c3;
+
+            --accent2: #6ce5ff;
+
             --card: rgba(255, 255, 255, .06);
             --stroke: rgba(255, 255, 255, .12);
             --text: rgba(255, 255, 255, .92);
             --muted: rgba(255, 255, 255, .65);
-            --accent: #27f5c3;
         }
+
 
         * {
             box-sizing: border-box
@@ -26,7 +34,11 @@
             margin: 0;
             font-family: Inter, system-ui, Arial;
             color: var(--text);
-            background: radial-gradient(1200px 500px at 50% 0%, rgba(39, 245, 195, .12), transparent 60%), var(--bg);
+            background:
+                radial-gradient(900px 420px at 15% 0%, rgba(108, 229, 255, .14), transparent 60%),
+                radial-gradient(900px 420px at 85% 0%, rgba(39, 245, 195, .14), transparent 60%),
+                radial-gradient(1200px 500px at 50% 0%, rgba(39, 245, 195, .10), transparent 60%),
+                var(--bg);
             overflow-x: hidden;
         }
 
@@ -84,14 +96,22 @@
             }
         }
 
+        .brand-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 14px rgba(39, 245, 195, .25));
+        }
+
         /* navbar */
         .nav {
             position: sticky;
             top: 0;
             z-index: 10;
             backdrop-filter: blur(10px);
-            background: rgba(5, 8, 22, .55);
-            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(5, 8, 22, .45);
+            border-bottom: 1px solid rgba(39, 245, 195, .16);
         }
 
         .nav-inner {
@@ -234,8 +254,10 @@
         }
 
         .cta.primary {
-            border-color: rgba(39, 245, 195, .35);
-            background: linear-gradient(180deg, rgba(39, 245, 195, .22), rgba(39, 245, 195, .08));
+            border-color: rgba(39, 245, 195, .45);
+            background: linear-gradient(135deg,
+                    rgba(39, 245, 195, .28),
+                    rgba(108, 229, 255, .14));
         }
 
         .cta:hover {
@@ -346,6 +368,7 @@
             border-radius: 18px;
             background: var(--card);
             border: 1px solid rgba(255, 255, 255, .10);
+            box-shadow: 0 0 60px rgba(39,245,195,.05);
         }
 
         .blockchain-panel {
@@ -554,7 +577,10 @@
 
     <header class="nav">
         <div class="wrap nav-inner">
-            <div class="brand"><span class="dot"></span>GeniuX Digital</div>
+            <div class="brand">
+                <img class="brand-logo" src="geniuX_LLC_LOGO-1024x582.png" alt="geniuX Digital LLC">
+                <span>GeniuX</span>
+            </div>
             <a class="btn" href="#contacto">Contacto</a>
         </div>
     </header>
